@@ -37,7 +37,10 @@
                     <%= t "end_date" %>
                   </th>
                   <th class="column-title">
-                    <%= t "edit_user_subject" %>
+                    <%= t "edit" %>
+                  </th>
+                  <th class="column-title">
+                    <%= t "report" %>
                   </th>
                 </tr>
               </thead>
@@ -70,16 +73,20 @@
                       <td>
                         <%= user_subject.end_date %>
                       </td>
-                      <td class="last">
-                        <%= link_to t("edit_user_subject"),
-                          edit_user_subject_path(user_subject.id) %>
+                      <td>
+                        <%= link_to t("edit"),
+                          edit_user_subject_path(user_subject.id), class: "btn btn-success" %>
+                      </td>
+                      <td>
+                        <%= link_to t("report"),
+                          edit_user_subject_path(user_subject.id), class: "btn btn-success" %>
                       </td>
                     </tr>
                   <% end %>
                 <% end %>
               </tbody>
             </table>
-            <%= link_to t("back"), subjects_path, class: "btn btn-success" %>
+            <%= link_to t("back"), subjects_path, class: "btn btn-primary" %>
           </div>
         </div>
       </div>

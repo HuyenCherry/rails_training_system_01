@@ -47,6 +47,7 @@ en:
   end_date: "End Date"
   edit_user_subject: "Edit User Subject"
   current_user_subject: "Current User Subject"
+  edit: "Edit"
   courses:
     new:
       name: "Name"
