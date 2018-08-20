@@ -1,0 +1,9 @@
+<% if @user_report.persisted? %>
+  $('.calendar').fullCalendar(
+    'renderEvent',
+    $.parseJSON("<%=j render(@user_report, format: :json).html_safe %>"),
+    true
+  );
+  $('#new_event').modal('hide');
+<% else %>
+<% end %>

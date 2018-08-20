@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= t "app_name" %></title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+    <%= action_cable_meta_tag %>
+    <%= stylesheet_link_tag "application", media: "all",
+      "data-turbolinks-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   </head>
 
@@ -22,6 +20,7 @@
             <div class="alert alert-<%= key %> flash"><%= value %></div>
           <% end %>
           <%= yield %>
+          <div id='remote_container'></div>
           <%= render "layouts/footer" %>
         </div>
       </div>

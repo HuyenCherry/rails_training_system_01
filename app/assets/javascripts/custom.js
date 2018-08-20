@@ -5,7 +5,7 @@
  */
 
 /** ******  left menu  *********************** **/
-$(function () {
+$(document).ready(function() {
     $('#sidebar-menu li ul').slideUp();
     $('#sidebar-menu li').removeClass('active');
 
@@ -49,7 +49,7 @@ $(function () {
 });
 
 /* Sidebar Menu active class */
-$(function () {
+$(document).on('turbolinks:load', function() {
     var url = window.location;
     $('#sidebar-menu a[href="' + url + '"]').parent('li').addClass('current-page');
     $('#sidebar-menu a').filter(function () {
@@ -68,7 +68,7 @@ $(window).resize(function () {
 
 
 /** ******  tooltip  *********************** **/
-$(function () {
+$(document).on('turbolinks:load', function() {
     $('[data-toggle="tooltip"]').tooltip()
 })
 /** ******  /tooltip  *********************** **/
@@ -221,11 +221,11 @@ var __slice = [].slice;
     });
 })(window.jQuery, window);
 
-$(function () {
+$(document).on('turbolinks:load', function() {
     return $(".starrr").starrr();
 });
 
-$(document).ready(function () {
+$(document).on('turbolinks:load', function() {
 
     $('#stars').on('starrr:change', function (e, value) {
         $('#count').html(value);

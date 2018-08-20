@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'report/index'
+  get 'user_reports/show'
   scope "(:locale)", locale: /en/ do
     devise_for :users
     root "static_pages#home"
@@ -14,5 +14,6 @@ Rails.application.routes.draw do
     resources :subjects
     resources :user_subjects
     resources :courses
+    resources :user_reports
   end
 end

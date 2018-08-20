@@ -69,10 +69,10 @@
                       <%= course.get_category %>
                     </td>
                     <td class="">
-                      <%= link_to t(".view_course"), user_course_path(course.id) %>
+                      <%= link_to t(".view_course"), user_course_path(course.id), data: { turbolinks: false } %>
                     </td>
                     <td class="last">
-                      <%= link_to t(".edit_course"), edit_course_path(course.id) %>
+                      <%= link_to t(".edit_course"), edit_course_path(course.id), data: { turbolinks: false } %>
                     </td>
                   </tr>
                 <% end %>

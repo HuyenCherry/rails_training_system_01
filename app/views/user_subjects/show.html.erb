@@ -39,9 +39,6 @@
                   <th class="column-title">
                     <%= t "edit" %>
                   </th>
-                  <th class="column-title">
-                    <%= t "report" %>
-                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -77,16 +74,13 @@
                         <%= link_to t("edit"),
                           edit_user_subject_path(user_subject.id), class: "btn btn-success" %>
                       </td>
-                      <td>
-                        <%= link_to t("report"),
-                          edit_user_subject_path(user_subject.id), class: "btn btn-success" %>
-                      </td>
                     </tr>
                   <% end %>
                 <% end %>
               </tbody>
             </table>
-            <%= link_to t("back"), subjects_path, class: "btn btn-primary" %>
+            <%= link_to t("back"), subjects_path,
+              class: "btn btn-primary", data: {turbolinks: false} %>
           </div>
         </div>
       </div>

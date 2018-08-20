@@ -36,6 +36,9 @@
                   <th class="column-title">
                     <%= t "end_date" %>
                   </th>
+                  <th class="column-title">
+                    <%= t "report" %>
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -44,20 +47,24 @@
                     <td class="a-center ">
                       <input type="checkbox" class="flat" name="table_records">
                     </td>
-                    <td class=" ">
+                    <td>
                       <%= user_course.user.name %>
                     </td>
-                    <td class=" ">
+                    <td>
                       <%= user_course.user.email %>
                     </td>
-                    <td class=" ">
+                    <td>
                       <%= user_course.progress %>
                     </td>
-                    <td class=" ">
+                    <td>
                       <%= user_course.start_date %>
                     </td>
-                    <td class=" ">
+                    <td>
                       <%= user_course.end_date %>
+                    </td>
+                    <td>
+                      <%= link_to t("report"), user_report_path(user_course.user.id),
+                        class: "btn btn-success", data: {turbolink: false} %>
                     </td>
                   </tr>
                 <% end %>
@@ -69,4 +76,3 @@
     </div>
   </div>
 </div>
-

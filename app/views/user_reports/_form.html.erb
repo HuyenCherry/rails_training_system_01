@@ -1,0 +1,16 @@
+<%= form_for @user_report, remote: true do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, class:"form-control" %>
+  <%= f.label :created_at %>
+  <%= f.date_field :created_at, class:"form-control"  %>
+  <%= f.label :updated_at %>
+  <%= f.text_area :content, class:"form-control" %>
+  <br/>
+  <%= f.button :submit, class:"btn btn-primary" %>
+  <%= link_to 'Delete',
+    user_report,
+    method: :delete,
+    class: 'btn btn-danger',
+    data: { confirm: 'Are you sure?' },
+    remote: true unless @user_report.new_record? %>
+<% end %>

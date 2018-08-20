@@ -77,7 +77,8 @@
                         <%= label_tag :category_1, "Unactive" ,class: "field-label" %>
                     </td>
                     <td>
-                      <%= link_to t("view_subject"), user_subject_path(subject.id) %>
+                      <%= link_to t("view_subject"), user_subject_path(subject.id),
+                        data: {turbolinks: false} %>
                     </td>
                     <td class="last">
                       <%= link_to t("edit_subject"), edit_subject_path(subject.id) %>

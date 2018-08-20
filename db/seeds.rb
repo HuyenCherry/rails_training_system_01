@@ -42,3 +42,12 @@ end
     user_course_id: rand(1..2)
   )
 end
+
+10.times do
+  UserReport.create!(
+    title: Faker::Cat.name,
+    content: Faker::Cat.registry,
+    user_id: 2,
+    user_subject_id: rand(1..2)
+  )
+end
